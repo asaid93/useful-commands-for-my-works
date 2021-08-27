@@ -1,6 +1,6 @@
 # Sadece belirtilmiş pattern'e uyan dosyaların
 # size'ını bul ve totalini göster.
-du -csh *202108*
+du -csh *202109*
 
 ------------------------------
 
