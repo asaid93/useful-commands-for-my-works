@@ -9,7 +9,7 @@ du -csh *202108*
 # paste komutu ile yan yana basıyoruz.
 # Bu sayede listelenen bütün dosyaların
 # aktif pasif sayılarını alt alta görebiliyoruz.
-ls ESER*.abn | while read file; do echo -n "$file "; cat $file | awk -F'\\|;\\|' '{print $4}' | sort | uniq -c | paste -sd ''; done
+ls isletme*.txt | while read file; do echo -n "$file "; cat $file | awk -F'\\|;\\|' '{print $4}' | sort | uniq -c | paste -sd ''; done
 
 ------------------------------
 
