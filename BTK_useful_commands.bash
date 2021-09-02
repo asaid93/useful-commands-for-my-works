@@ -1,3 +1,19 @@
+# sadece ilk matching characteri silmek için [^>] eklenmeli
+awk '{gsub(/^<[^>]*>/,"")}1' file.txt
+# input
+<div>fruit</div></td>
+# çıktı
+fruit</div></td>
+
+------------------------------
+
+# matching pattern içinde OR "|" kullanımına örnek
+awk '{x = ( $12~/RNA|mir-/ || $3=="pseudogene" ) ? "non-" : ""
+      $1 = x "coding" OFS $1 
+      print}'
+
+------------------------------
+
 # Sadece belirtilmiş pattern'e uyan dosyaların
 # size'ını bul ve totalini göster.
 du -csh *202109*
